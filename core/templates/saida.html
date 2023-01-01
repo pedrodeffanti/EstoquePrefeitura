@@ -1,0 +1,43 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Saída</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <divclass class="countainer">
+            <divcab calss="row">
+                <h1>Saída</h1>
+            </divcab>
+
+            <divform class="row">
+                <form action="." method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input type="submit" value="Salvar">
+                </form>
+            </divform>
+            <divbutton>
+                <a href='ativo/'><button>Cadastrar Ativos</button></a>
+                <a href='item/'><button>Cadastrar Ítens</button></a>
+                <a href='accounts/logout/'><button>Fazer Logout</button></a>
+            </divbutton>
+        </divclass>
+    {% else %}
+        <divlogin>
+            <h1>Controle Interno de Estoque - TI</h1>
+                <a href='accounts/login'><button>Fazer Login</button></a>
+        </divlogin>
+    {% endif %}
+    <divbutton>
+        <a href='listsaida/'><button>Listar Saídas</button></a>
+    </divbutton>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

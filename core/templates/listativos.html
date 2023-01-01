@@ -1,0 +1,30 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Ativos</title>
+</head>
+<body>
+    <divcab>
+        <h2>Lista de Ativos Cadastrados</h2>
+    </divcab>
+        <divlist>
+            <ul>
+                {% for ativo in ativos %}
+                <a href="{% url 'alterAtivoViews' ativo.id %}">
+                    <li>Ativo: {{ ativo.Ativo}} -|- Responsável: {{ ativo.Resp }}</li>
+                </a>
+                {% endfor %}
+            </ul>
+        </divlist>
+        <divbutton>
+            <a class="item" href="/">Início</a>
+        </divbutton>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Ítens</title>
+</head>
+<body>
+    <divcab>
+        <h2>Lista de Ítens Cadastrados</h2>
+    </divcab>
+        <divlist>
+            <ul>
+                {% for item in item %}
+                <a href="{% url 'alterItemViews' item.id %}">
+                    <li>Ítem: {{ item.Item}} -|- Quantidade: {{ item.Quant }}</li>
+                </a>
+                {% endfor %}
+            </ul>
+        </divlist>
+    <divbutton>
+    <a class="item" href="/">Início</a>
+    </divbutton>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

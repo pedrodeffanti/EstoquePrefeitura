@@ -1,0 +1,29 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Lista de Saídas</title>
+</head>
+<body>
+    <divcab>
+        <h2>Lista de Saídas</h2>
+    </divcab>
+        <divlist>
+            <ul>
+                {% for saida in saida %}
+                <li>Data: {{ saida.data }} -|- Ativo: {{ saida.ativo }} -|- Ítem: {{ saida.item }} -|- Quantidade: {{ saida.quant }}</li>
+                {% endfor %}
+            </ul>
+        </divlist>
+    <divbutton>
+        <a class="item" href="/">Início</a>
+    </divbutton>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

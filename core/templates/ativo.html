@@ -1,0 +1,37 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Ativo</title>
+</head>
+<body>
+    <divclass class="countainer">
+        <divcab calss="row">
+            <h1>Cadastrar Ativos</h1>
+        </divcab>
+
+        <divform class="row">
+            <form action="." method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Salvar">
+            </form>
+        </divform>
+        <divbutton>
+            <a href='listativos/'><button>Listar Ativos</button></a>
+            <a href='/'><button>Voltar</button></a>
+        </divbutton>
+    </divclass>
+    <divbutton>
+        {% if ativo %}
+            <a href="{% url 'deleteAtivoViews' ativo.id %}">Delete</a>
+        {% endif %}
+    </divbutton>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

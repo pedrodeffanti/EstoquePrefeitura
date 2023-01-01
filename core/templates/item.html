@@ -1,0 +1,35 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Ítem</title>
+</head>
+<body>
+    <divclass class="countainer">
+        <divcab calss="row">
+            <h1>Cadastrar Ítens</h1>
+        </divcab>
+
+        <divform class="row">
+            <form action="." method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Salvar">
+            </form>
+        </divform>
+        <divbutton>
+            <a href='listitem/'><button>Listar Ítens</button></a>
+            <input type='button' value='Voltar' onclick='history.go(-1)' />
+        </divbutton>
+        {% if item %}
+            <a href="{% url 'deleteItemViews' item.id %}">Delete</a>
+        {% endif %}
+    </divclass>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

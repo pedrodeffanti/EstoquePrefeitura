@@ -1,0 +1,22 @@
+    {% load static %}
+    {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Deletar Ítem</title>
+</head>
+<body>
+    <divform>
+        <form method="post">
+            {% csrf_token %}
+            <h2>Você tem certeza que quer deletar este ítem? {{ item.Item }} ?</h2>
+            <button type="submit">Confirmar?</button>
+        </form>
+    </divform>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
