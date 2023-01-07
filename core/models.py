@@ -28,6 +28,11 @@ class saidaModels(models.Model):
     item = models.ForeignKey(itemModels, verbose_name='Ítem', on_delete=models.CASCADE)
     quant = models.PositiveIntegerField('Quantidade')
 
+    def save(self, force_insert=False, force_update=False, *args, **Kwargs):
+        self.item.Quant -= self.quant
+        self.item.save()
+        super(saidaModels, self).save(force_insert, force_update, *args, **Kwargs)
+
     def __str__(self):
         return str(self.item)
 
