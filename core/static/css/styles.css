@@ -7,3 +7,9 @@ divlist {
     font-size: 15px;
     text-align: justify-all
 }
+img {
+    height:90;
+    width:700;
+    justify-content: center;
+    position: relative;
+}

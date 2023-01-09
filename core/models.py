@@ -23,7 +23,7 @@ class ativoModels(models.Model):
         verbose_name_plural = 'Ativos'
 
 class saidaModels(models.Model):
-    data = models.DateField('Data', max_length=9)
+    data = models.DateField('Data', max_length=8)
     ativo = models.ForeignKey(ativoModels, verbose_name='Ativo', on_delete=models.CASCADE)
     item = models.ForeignKey(itemModels, verbose_name='Ítem', on_delete=models.CASCADE)
     quant = models.PositiveIntegerField('Quantidade')
