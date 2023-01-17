@@ -23,16 +23,16 @@ class ativoModels(models.Model):
         verbose_name_plural = 'Ativos'
 
 class saidaModels(models.Model):
-    data = models.DateField('Data', max_length=8)
+    data = models.DateField('Data')
     ativo = models.ForeignKey(ativoModels, verbose_name='Ativo', on_delete=models.CASCADE)
     item = models.ForeignKey(itemModels, verbose_name='Ítem', on_delete=models.CASCADE)
     quant = models.PositiveIntegerField('Quantidade')
 
-    def save(self, force_insert=False, force_update=False, *args, **kwargs):
+    def save(self, force_insert=False, force_update=False, *args, **Kwargs):
         self.item.Quant -= self.quant
         self.item.save()
-        super(saidaModels, self).save(force_insert, force_update, *args, **kwargs)
-
+        super(saidaModels, self).save(force_insert, force_update, *args, **Kwargs)
+    
     def __str__(self):
         return str(self.item)
 

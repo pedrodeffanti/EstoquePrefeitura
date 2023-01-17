@@ -12,11 +12,10 @@
 <body>
     {% if user.is_authenticated %}
         <divclass class="countainer">
-            <img src="static/img/brasao.jpg",height="90", width="700">
             <divcab calss="row">
+                <h2>Prefeitura Municipal de Iracemápolis - Controle de Estoque - TI</h2>
                 <h1>Saída</h1>
             </divcab>
-
             <divform class="row">
                 <form action="." method="post">
                     {% csrf_token %}
@@ -36,9 +35,9 @@
                 <a href='accounts/login'><button>Fazer Login</button></a>
         </divlogin>
     {% endif %}
-    <divbutton>
+    <divbutton2>
         <a href='listsaida/'><button>Listar Saídas</button></a>
-    </divbutton>
+    </divbutton2>
 <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

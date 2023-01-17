@@ -12,7 +12,8 @@
 <body>
     <divclass class="countainer">
         <divcab calss="row">
-            <h1>Cadastrar Ítens</h1>
+            <h2>Prefeitura Municipal de Iracemápolis - Controle de Estoque - TI</h2>
+            <h1>Alterar ou Cadastrar Ítens</h1>
         </divcab>
 
         <divform class="row">
@@ -23,8 +24,8 @@
             </form>
         </divform>
         <divbutton>
-            <a href='listitem/'><button>Listar Ítens</button></a>
-            <input type='button' value='Voltar' onclick='history.go(-1)' />
+            <a href='http://127.0.0.1:8000/item/listitem/'><button>Listar Ítens</button></a>
+            <a href='/'><button>Voltar</button></a>
         </divbutton>
         {% if item %}
             <a href="{% url 'deleteItemViews' item.id %}">Delete</a>

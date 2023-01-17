@@ -10,11 +10,16 @@
     <title>Deletar Ítem</title>
 </head>
 <body>
+    <divcab>    
+        <h2>Prefeitura Municipal de Iracemápolis - Controle de Estoque - TI</h2>
+        <h1>Deletar Ítem</h1>
+    </divcab>
     <divform>
         <form method="post">
             {% csrf_token %}
             <h2>Você tem certeza que quer deletar este ítem? {{ item.Item }} ?</h2>
             <button type="submit">Confirmar?</button>
+            <a href='/item'><button>Voltar</button></a>
         </form>
     </divform>
 <script src="{% static 'js/script.js' %}"></script>

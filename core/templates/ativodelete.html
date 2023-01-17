@@ -10,11 +10,16 @@
     <title>Deletar Ativo</title>
 </head>
 <body>
+    <divcab>    
+        <h2>Prefeitura Municipal de Iracemápolis - Controle de Estoque - TI</h2>
+        <h1>Deletar Ativo</h1>
+    </divcab>
     <divform>
         <form method="post">
             {% csrf_token %}
             <h2>Você tem certeza que quer deletar este ativo {{ ativo.Ativo }} ?</h2>
             <button type="submit">Confirmar?</button>
+            <input type='button' value='Voltar' onclick='history.go(-1)' />
         </form>
     </divform>
     <script src="{% static 'js/script.js' %}"></script>

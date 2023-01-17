@@ -9,8 +9,8 @@ urlpatterns = [
     path('ativo/listativos/', listAtivosViews, name='listativos.html'),
     path('item/listitem/', listItemViews, name='listitem.html'),
     path('listsaida/', listSaidaViews, name='listsaida.html'),
-    path('updateitem/<int:id>/', alterItemViews, name='alterItemViews'),
+    path('item/<int:id>/', alterItemViews, name='alterItemViews'),
     path('deleteitem/<int:id>', deleteItemViews, name='deleteItemViews'),
-    path('updateativo/<int:id>/', alterAtivoViews, name='alterAtivoViews'),
+    path('ativo/<int:id>/', alterAtivoViews, name='alterAtivoViews'),
     path('deleteativo/<int:id>/', deleteAtivoViews, name='deleteAtivoViews')
 ]

@@ -1,9 +1,59 @@
+body {
+    background-color:gainsboro;
+}
 divcab {
     color:RoyalBlue ;
     font-size: 20px;
     text-align: center;
 }
 divlist {
-    font-size: 15px;
-    text-align: justify-all
+    font-size: 20px;
+    text-align: justify-all,
+}
+divform {
+    font-family: 'Goudy Old Style';
+    font-size: 20px;
+    font-style:italic;
+    font-variant: small-caps;
+}
+h1 {
+    color:black;
+}
+ul {
+	list-style-type:circle;
+    list-style-position:inherit;
+}
+ul li{
+	padding: 3px 10px;
+	color:black;
+}
+select {
+    width: 468px;
+}
+input {
+    width: 460px;
+}
+input[type=submit] {
+    width: 468px;
+    font-family:sans-serif;
+    font-variant:normal;
+    font-stretch:wider;
+    font-size: 20px;
+    height: 35px;
+}
+button {
+    width: 114px;
+    font-family:sans-serif;
+    font-variant:normal;
+    font-stretch:wider;
+    font-size: 13px;
+    height: 35px;
+}
+input[type=button] {
+    width: 350px;
+    font-family:sans-serif;
+    font-variant:normal;
+    font-stretch:wider;
+    font-size: 20px;
+    height: 38px;
 }
